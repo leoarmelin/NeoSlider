@@ -3,12 +3,27 @@
 
 A Jetpack Compose library to create extremely customizable sliders.
 
-[](/gifs/example.gif)
+<img src="./gifs/example.gif" height="400" width="200" />
 
 ## Usage
 You can see the [examples here](https://github.com/leoarmelin/neo-slider/tree/master/app/src/main/java/com/leoarmelin/customslider/examples).
 
-1. Customizing the modifiers
+1. Simplicity is everything
+~~~ kotlin
+@Composable
+fun MyCoolSlider() {
+    var sliderState by remember { mutableStateOf(0f) }
+
+    CustomSlider(
+        value = sliderState,
+        onSlide = { newValue, percentage ->
+            sliderState = newValue
+        }
+    )
+}
+~~~
+
+2. Customizing the modifiers
 ~~~ kotlin
 @Composable
 fun MyCoolSlider() {
@@ -34,7 +49,7 @@ fun MyCoolSlider() {
 }
 ~~~
 
-2. Watching the width
+3. Watching the width
 ~~~ kotlin
 @Composable
 fun MyFantasticSlider() {
