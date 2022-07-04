@@ -3,6 +3,8 @@
 
 A Jetpack Compose library to create extremely customizable sliders.
 
+[](/gifs/example.gif)
+
 ## Usage
 You can see the [examples here](https://github.com/leoarmelin/neo-slider/tree/master/app/src/main/java/com/leoarmelin/customslider/examples).
 
